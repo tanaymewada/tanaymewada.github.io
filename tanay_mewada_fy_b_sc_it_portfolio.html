@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanay Mewada — FY B.Sc. IT Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8f7f4;
+      color: #1c1917;
+    }
+    body.dark-mode {
+      background-color: #18181b;
+      color: #f4f4f5;
+    }
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col transition-colors duration-200 selection:bg-teal-700 selection:text-white">
+
+  <!-- Top Navigation -->
+  <header id="siteHeader" class="sticky top-0 z-40 border-b border-stone-200 bg-[#f8f7f4]/95 backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-md bg-teal-800 text-white flex items-center justify-center font-bold text-sm mono tracking-tight">
+          TM
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-base tracking-tight group-hover:text-teal-700 transition-colors">Tanay Mewada</div>
+          <div class="text-xs text-stone-500">FY B.Sc. IT • Jai Hind College</div>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-600">
+        <a href="#skills" class="hover:text-teal-800 transition-colors">Skills</a>
+        <a href="#calculator" class="hover:text-teal-800 transition-colors">SGPA Tool</a>
+        <a href="#projects" class="hover:text-teal-800 transition-colors">Projects</a>
+        <a href="#notes" class="hover:text-teal-800 transition-colors">Notes & Goals</a>
+        <a href="#contact" class="hover:text-teal-800 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" type="button" class="px-3 py-1.5 rounded-md border border-stone-300 bg-white text-stone-700 hover:bg-stone-100 text-xs font-medium transition-colors">
+          Dark Mode
+        </button>
+        <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-md bg-teal-800 hover:bg-teal-900 text-white text-xs sm:text-sm font-medium transition-colors">
+          GitHub
+        </a>
+        <button id="mobileMenuBtn" type="button" class="md:hidden px-2.5 py-1.5 rounded-md border border-stone-300 bg-white text-stone-700 text-sm" aria-label="Menu">
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-stone-200 bg-white px-4 py-3 space-y-1.5 text-sm">
+      <a href="#skills" class="mobile-nav-link block py-1.5 px-2 rounded hover:bg-stone-100">Skills</a>
+      <a href="#calculator" class="mobile-nav-link block py-1.5 px-2 rounded hover:bg-stone-100">SGPA Tool</a>
+      <a href="#projects" class="mobile-nav-link block py-1.5 px-2 rounded hover:bg-stone-100">Projects</a>
+      <a href="#notes" class="mobile-nav-link block py-1.5 px-2 rounded hover:bg-stone-100">Notes & Goals</a>
+      <a href="#contact" class="mobile-nav-link block py-1.5 px-2 rounded hover:bg-stone-100">Contact</a>
+    </div>
+  </header>
+
+  <main id="top" class="flex-grow">
+    <!-- Hero Section -->
+    <section class="py-12 sm:py-16 border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-5">
+          <p class="mono text-xs uppercase tracking-widest text-teal-800 font-semibold">
+            Student Developer Portfolio
+          </p>
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
+            Hi, I'm Tanay Mewada.
+          </h1>
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+            I'm a First-Year B.Sc. Information Technology student at <strong>Jai Hind College, Mumbai</strong>. After finishing my first semester, I built this site to organize what I've learned in C++, Python, HTML/CSS, JavaScript, jQuery, PHP, and MySQL—and to keep track of my coding projects in one place.
+          </p>
+
+          <div class="flex flex-wrap gap-3 pt-1">
+            <a href="#projects" class="px-4 py-2.5 rounded-md bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium transition-colors">
+              See My Projects
+            </a>
+            <a href="#calculator" class="px-4 py-2.5 rounded-md border border-stone-300 bg-white hover:bg-stone-100 text-stone-800 text-sm font-medium transition-colors">
+              Open SGPA Calculator
+            </a>
+            <button id="copyGithubBtn" type="button" class="px-4 py-2.5 rounded-md border border-stone-300 bg-stone-100 hover:bg-stone-200 text-stone-700 mono text-xs transition-colors">
+              Copy GitHub Link
+            </button>
+          </div>
+        </div>
+
+        <!-- Clean Student Fact Sheet Card (No flashy terminal) -->
+        <div class="lg:col-span-5">
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 shadow-sm space-y-4">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+              <span class="font-semibold text-sm">Student Overview</span>
+              <span class="mono text-xs px-2 py-0.5 rounded bg-teal-50 text-teal-800 border border-teal-200">2026</span>
+            </div>
+            <dl class="space-y-2.5 text-sm">
+              <div class="flex justify-between gap-4">
+                <dt class="text-stone-500">College</dt>
+                <dd class="font-medium text-right">Jai Hind College, Mumbai</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-stone-500">Program</dt>
+                <dd class="font-medium text-right">FY B.Sc. IT (Sem 1 Complete)</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-stone-500">GitHub</dt>
+                <dd class="mono text-xs font-medium text-teal-800 text-right">
+                  <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="underline hover:text-teal-600">@tanaymewada</a>
+                </dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-stone-500">Core Stack</dt>
+                <dd class="font-medium text-right">C++, Python, HTML/JS, PHP/SQL</dd>
+              </div>
+            </dl>
+            <div class="pt-2 border-t border-stone-100 text-xs text-stone-500">
+              Currently practicing: Problem solving in Python & C++, and responsive web layouts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-14 border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Skills & Technologies</h2>
+            <p class="text-sm text-stone-600 mt-1">Topics covered in Semester 1 and practiced through small hands-on exercises.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button type="button" data-filter="all" class="skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-teal-800 text-white transition-colors">All (6)</button>
+            <button type="button" data-filter="core" class="skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-white border border-stone-300 text-stone-700 hover:bg-stone-100 transition-colors">Languages</button>
+            <button type="button" data-filter="web" class="skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-white border border-stone-300 text-stone-700 hover:bg-stone-100 transition-colors">Web Frontend</button>
+            <button type="button" data-filter="backend" class="skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-white border border-stone-300 text-stone-700 hover:bg-stone-100 transition-colors">Backend & Tools</button>
+          </div>
+        </div>
+
+        <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive SGPA Calculator + Code Comparison -->
+    <section id="calculator" class="py-14 border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">SGPA & Attendance Checker</h2>
+          <p class="text-sm text-stone-600 mt-1">
+            A small utility I built with JavaScript to calculate Semester 1 SGPA and check the 75% attendance rule. On the right, you can see how I wrote the same logic in Python, C++, JavaScript, and PHP.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Calculator Form -->
+          <div class="lg:col-span-5 theme-card rounded-lg border border-stone-200 bg-white p-5 shadow-sm space-y-4">
+            <h3 class="font-semibold text-base border-b border-stone-200 pb-2.5">Enter Subject Marks</h3>
+
+            <div class="space-y-3.5">
+              <div>
+                <label for="cppMarks" class="block text-xs font-medium text-stone-600 mb-1">C++ Programming (out of 100)</label>
+                <input id="cppMarks" type="number" min="0" max="100" value="84" class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none" />
+              </div>
+
+              <div>
+                <label for="pythonMarks" class="block text-xs font-medium text-stone-600 mb-1">Python Programming (out of 100)</label>
+                <input id="pythonMarks" type="number" min="0" max="100" value="89" class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none" />
+              </div>
+
+              <div>
+                <label for="webMarks" class="block text-xs font-medium text-stone-600 mb-1">Web Designing (HTML/JS/PHP) (out of 100)</label>
+                <input id="webMarks" type="number" min="0" max="100" value="92" class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none" />
+              </div>
+
+              <div>
+                <label for="attendancePct" class="block text-xs font-medium text-stone-600 mb-1">Attendance (%)</label>
+                <input id="attendancePct" type="range" min="50" max="100" value="88" class="w-full accent-teal-800 cursor-pointer" />
+                <div class="flex justify-between text-xs text-stone-500 mt-1">
+                  <span>Required: 75%</span>
+                  <span id="attendanceValueDisplay" class="font-semibold text-teal-800">88%</span>
+                </div>
+              </div>
+
+              <button id="calculateSgpaBtn" type="button" class="w-full py-2 rounded-md bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium transition-colors">
+                Calculate Result
+              </button>
+            </div>
+
+            <div class="rounded-md bg-stone-50 border border-stone-200 p-3.5 space-y-1.5 theme-subcard">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-stone-600">Estimated SGPA:</span>
+                <span id="sgpaScoreText" class="font-bold text-lg text-teal-800">9.30 / 10</span>
+              </div>
+              <div class="flex items-center justify-between text-xs text-stone-600">
+                <span>Average & Grade:</span>
+                <span id="avgPctText" class="font-semibold">88.3% (O Grade)</span>
+              </div>
+              <div id="attendanceBadgeText" class="text-xs text-teal-800 pt-1.5 border-t border-stone-200">
+                Attendance Status: Eligible (88% is above 75%)
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Comparison Tabs -->
+          <div class="lg:col-span-7 rounded-lg border border-stone-800 bg-stone-900 text-stone-100 overflow-hidden shadow-sm">
+            <div class="px-4 py-2.5 bg-stone-800 border-b border-stone-700 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap gap-1.5">
+                <button type="button" data-lang="python" class="lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-teal-700 text-white transition-colors">Python</button>
+                <button type="button" data-lang="cpp" class="lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-stone-900 text-stone-300 hover:bg-stone-700 transition-colors">C++</button>
+                <button type="button" data-lang="js" class="lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-stone-900 text-stone-300 hover:bg-stone-700 transition-colors">JS / jQuery</button>
+                <button type="button" data-lang="php" class="lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-stone-900 text-stone-300 hover:bg-stone-700 transition-colors">PHP + MySQL</button>
+              </div>
+              <button id="copyCodeSnippetBtn" type="button" class="px-2.5 py-1 rounded border border-stone-600 text-xs text-stone-300 hover:bg-stone-700 transition-colors">
+                Copy
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <div id="langExplanationBanner" class="text-xs text-stone-300 bg-stone-800/80 border-l-2 border-teal-500 px-3 py-2 rounded-r">
+                Python version using a function and dictionary output.
+              </div>
+              <pre id="codeDisplayArea" class="mono text-xs sm:text-sm text-stone-100 overflow-x-auto leading-relaxed max-h-80"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-14 border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">My Projects</h2>
+          <p class="text-sm text-stone-600 mt-1">Small projects I built step by step to practice what I learned in Semester 1.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 flex flex-col justify-between shadow-sm">
+            <div class="space-y-2.5">
+              <div class="mono text-xs text-teal-800 font-semibold">HTML • CSS • JS</div>
+              <h3 class="font-bold text-base">1. Personal Portfolio Website</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                This single-page website built from scratch with responsive layouts, skill filters, and an interactive SGPA calculator.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+              <button type="button" data-project="portfolio" class="project-modal-btn font-semibold text-teal-800 hover:underline">Read Notes</button>
+              <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="text-stone-500 hover:text-stone-900">GitHub Repo</a>
+            </div>
+          </div>
+
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 flex flex-col justify-between shadow-sm">
+            <div class="space-y-2.5">
+              <div class="mono text-xs text-teal-800 font-semibold">Python • C++</div>
+              <h3 class="font-bold text-base">2. Study Hours & Marks Tracker</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                A console program written in Python and C++ to record daily study hours, calculate subject averages, and spot weak topics.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+              <button type="button" data-project="tracker" class="project-modal-btn font-semibold text-teal-800 hover:underline">Read Notes</button>
+              <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="text-stone-500 hover:text-stone-900">GitHub Repo</a>
+            </div>
+          </div>
+
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 flex flex-col justify-between shadow-sm">
+            <div class="space-y-2.5">
+              <div class="mono text-xs text-teal-800 font-semibold">PHP • MySQL • jQuery</div>
+              <h3 class="font-bold text-base">3. Event Registration Form</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                A practice form using jQuery for input validation, PHP for handling POST submissions, and phpMyAdmin (MySQL) for storing entries.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+              <button type="button" data-project="crud" class="project-modal-btn font-semibold text-teal-800 hover:underline">Read Notes</button>
+              <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="text-stone-500 hover:text-stone-900">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes & 6-Month Goals -->
+    <section id="notes" class="py-14 border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Learning Notes & Next Goals</h2>
+          <p class="text-sm text-stone-600 mt-1">What I picked up while building these projects and what I plan to work on over the next 6 months.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 space-y-3 shadow-sm">
+            <h3 class="font-bold text-base">3 Things I Learned</h3>
+            <ul class="space-y-2.5 text-sm text-stone-700 list-disc pl-5">
+              <li><strong>Responsive Design & JS Events:</strong> Making a page look clean on both phone and laptop screens, and updating values with JavaScript without refreshing.</li>
+              <li><strong>GitHub & Hosting:</strong> Setting up my first repository, writing a clear README, and using GitHub Pages to publish a live link.</li>
+              <li><strong>Comparing Syntax Across Languages:</strong> Writing the same SGPA logic in Python, C++, JS, and PHP helped me understand how each language handles functions and variables.</li>
+            </ul>
+          </div>
+
+          <div class="theme-card rounded-lg border border-stone-200 bg-white p-5 space-y-3 shadow-sm">
+            <h3 class="font-bold text-base">1 Difficulty I Faced</h3>
+            <p class="text-sm text-stone-700 leading-relaxed">
+              Starting with a completely blank GitHub account, I found it tricky at first to organize the files properly so GitHub Pages would load the site, and to stop the layout from breaking on smaller phone screens.
+            </p>
+            <p class="text-sm text-stone-700 leading-relaxed">
+              <strong>How I fixed it:</strong> I tested different screen widths in browser DevTools, used a simple responsive grid, and placed <code class="mono text-xs bg-stone-100 px-1.5 py-0.5 rounded">index.html</code> directly in the root folder.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-bold text-lg">Next 6-Month Plan</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="theme-card rounded-lg border border-stone-200 bg-white p-4 space-y-1.5 shadow-sm">
+              <div class="mono text-xs text-amber-700 font-semibold">Goal 1 (Months 1–2)</div>
+              <h4 class="font-bold text-sm">C++ & Python Practice</h4>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Solve at least 75 coding problems on HackerRank and LeetCode to get comfortable with loops, arrays, and functions.
+              </p>
+            </div>
+            <div class="theme-card rounded-lg border border-stone-200 bg-white p-4 space-y-1.5 shadow-sm">
+              <div class="mono text-xs text-amber-700 font-semibold">Goal 2 (Months 3–4)</div>
+              <h4 class="font-bold text-sm">Full-Stack Web App</h4>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Build a complete database-connected web app using HTML/JS on the frontend and PHP or Python with MySQL on the backend.
+              </p>
+            </div>
+            <div class="theme-card rounded-lg border border-stone-200 bg-white p-4 space-y-1.5 shadow-sm">
+              <div class="mono text-xs text-amber-700 font-semibold">Goal 3 (Months 5–6)</div>
+              <h4 class="font-bold text-sm">Certifications & Events</h4>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                Complete a verified certification in Python or Web Development, update my LinkedIn profile, and join a college hackathon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-14">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="theme-card rounded-lg border border-stone-200 bg-white p-6 shadow-sm space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-200 pb-4">
+            <div>
+              <h2 class="text-xl font-bold">Contact Me</h2>
+              <p class="text-xs sm:text-sm text-stone-500 mt-0.5">Tanay Mewada • FY B.Sc. IT, Jai Hind College, Mumbai</p>
+            </div>
+            <a href="https://github.com/tanaymewada" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-md border border-stone-300 text-xs font-medium hover:bg-stone-100 transition-colors self-start sm:self-auto">
+              github.com/tanaymewada
+            </a>
+          </div>
+
+          <form id="contactForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+            <div>
+              <label for="senderName" class="block text-xs font-medium text-stone-600 mb-1">Your Name</label>
+              <input id="senderName" type="text" required placeholder="Enter your name" class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none" />
+            </div>
+            <div>
+              <label for="senderRole" class="block text-xs font-medium text-stone-600 mb-1">Subject</label>
+              <select id="senderRole" class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none">
+                <option value="Feedback">Feedback</option>
+                <option value="Project Idea">Project Idea</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="senderMessage" class="block text-xs font-medium text-stone-600 mb-1">Message</label>
+              <textarea id="senderMessage" rows="3" required placeholder="Write a short note..." class="theme-input w-full px-3 py-2 rounded-md border border-stone-300 bg-white text-sm focus:border-teal-700 focus:outline-none"></textarea>
+            </div>
+            <div class="sm:col-span-2 flex items-center justify-between gap-4">
+              <span id="formFeedbackMsg" class="text-xs text-teal-700 font-medium hidden">Message saved! Thank you for reaching out.</span>
+              <button type="submit" class="ml-auto px-5 py-2 rounded-md bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium transition-colors">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center p-4">
+    <div class="theme-card bg-white border border-stone-200 rounded-lg max-w-lg w-full p-5 space-y-4 shadow-xl">
+      <div class="flex items-center justify-between border-b border-stone-200 pb-2.5">
+        <h3 id="modalTitle" class="text-base font-bold">Project Notes</h3>
+        <button id="closeModalBtn" type="button" class="text-stone-500 hover:text-stone-900 text-xs font-semibold px-2 py-1 rounded bg-stone-100">Close</button>
+      </div>
+      <p id="modalDesc" class="text-sm text-stone-600 leading-relaxed"></p>
+      <div class="bg-stone-50 border border-stone-200 rounded-md p-3.5 theme-subcard">
+        <div class="text-xs font-semibold text-teal-800 mb-1.5">Key Highlights:</div>
+        <ul id="modalBullets" class="text-xs text-stone-700 space-y-1.5 list-disc pl-4"></ul>
+      </div>
+      <div class="flex justify-end">
+        <button id="closeModalFooterBtn" type="button" class="px-4 py-1.5 rounded-md bg-teal-800 hover:bg-teal-900 text-white text-xs font-medium">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden px-4 py-2 rounded-md bg-stone-900 text-white text-xs font-medium shadow-lg">
+    Copied!
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 py-5 text-xs text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>Tanay Mewada • FY B.Sc. IT, Jai Hind College</span>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </div>
+  </footer>
+
+  <script>
+    const skillsData = [
+      {
+        title: 'Python Programming',
+        category: 'core',
+        tag: 'Core Language',
+        status: 'Practicing',
+        desc: 'Functions, dictionaries, loops, file handling, and basic data scripts.',
+        items: ['Python 3', 'Functions', 'File I/O']
+      },
+      {
+        title: 'C++ & OOP Basics',
+        category: 'core',
+        tag: 'Core Language',
+        status: 'Sem 1 Core',
+        desc: 'Classes, objects, arrays, loops, and structured console programs.',
+        items: ['C++', 'OOP', 'Arrays']
+      },
+      {
+        title: 'HTML5 & CSS3',
+        category: 'web',
+        tag: 'Frontend',
+        status: 'Core Web',
+        desc: 'Page structure, Flexbox, CSS Grid, and mobile-friendly layouts.',
+        items: ['HTML5', 'CSS3', 'Responsive']
+      },
+      {
+        title: 'JavaScript & jQuery',
+        category: 'web',
+        tag: 'Frontend',
+        status: 'Practicing',
+        desc: 'Click events, DOM updates, form validation, and interactive calculators.',
+        items: ['JavaScript', 'jQuery', 'DOM']
+      },
+      {
+        title: 'PHP & MySQL (phpMyAdmin)',
+        category: 'backend',
+        tag: 'Backend & DB',
+        status: 'Sem 1 Core',
+        desc: 'Handling HTML form POST data, SQL queries, and managing tables in phpMyAdmin.',
+        items: ['PHP', 'MySQL', 'phpMyAdmin']
+      },
+      {
+        title: 'Git & GitHub',
+        category: 'backend',
+        tag: 'Tools',
+        status: 'Active',
+        desc: 'Creating repositories, uploading code, writing READMEs, and GitHub Pages.',
+        items: ['Git', 'GitHub', 'Pages']
+      }
+    ];
+
+    const codeSnippets = {
+      python: {
+        banner: 'Python version using a function and dictionary output.',
+        code: `# Tanay Mewada - FY B.Sc. IT
+def evaluate_student(cpp, python_m, web, attendance):
+    avg = (cpp + python_m + web) / 3.0
+    sgpa = round(min(10.0, (avg / 9.5)), 2)
+    grade = "O Grade" if avg >= 80 else "A+ Grade" if avg >= 70 else "A Grade"
+    status = "Eligible" if attendance >= 75 else "Low Attendance"
+    return {"avg": round(avg, 2), "sgpa": sgpa, "grade": grade, "status": status}
+
+print(evaluate_student(84, 89, 92, 88))`
+      },
+      cpp: {
+        banner: 'C++ version using a class and member function.',
+        code: `// Tanay Mewada - FY B.Sc. IT
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class StudentReport {
+public:
+    double computeSGPA(int cpp, int py, int web) {
+        double avg = (cpp + py + web) / 3.0;
+        return (avg / 9.5 > 10.0) ? 10.0 : (avg / 9.5);
+    }
+};
+
+int main() {
+    StudentReport tanay;
+    cout << fixed << setprecision(2);
+    cout << "SGPA: " << tanay.computeSGPA(84, 89, 92) << " / 10" << endl;
+    return 0;
+}`
+      },
+      js: {
+        banner: 'JavaScript & jQuery version updating the DOM without reloading.',
+        code: `// Tanay Mewada - FY B.Sc. IT
+function updateAcademicCard(cpp, py, web, attendance) {
+  const avg = (cpp + py + web) / 3;
+  const sgpa = Math.min(10, avg / 9.5).toFixed(2);
+  // jQuery equivalent: $('#sgpaScoreText').text(sgpa + ' / 10');
+  document.getElementById('sgpaScoreText').textContent = sgpa + ' / 10';
+  return { avg, sgpa, isEligible: attendance >= 75 };
+}`
+      },
+      php: {
+        banner: 'PHP + MySQL version saving student records into phpMyAdmin.',
+        code: `<?php
+// Tanay Mewada - FY B.Sc. IT
+$conn = new mysqli("localhost", "root", "", "bscit_records");
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $student = "Tanay Mewada";
+    $sgpa = 9.30;
+    $stmt = $conn->prepare("INSERT INTO sem1_results (student_name, sgpa) VALUES (?, ?)");
+    $stmt->bind_param("sd", $student, $sgpa);
+    $stmt->execute();
+    echo "Record saved!";
+}
+?>`
+      }
+    };
+
+    const projectDetails = {
+      portfolio: {
+        title: '1. Personal Portfolio Website',
+        desc: 'Built step by step using HTML, Tailwind CSS, and JavaScript, and hosted on GitHub Pages.',
+        bullets: [
+          'Warm paper-style color palette with a Dark Mode toggle.',
+          'Interactive SGPA & attendance calculator built with vanilla JS.',
+          'Code comparison tabs for Python, C++, JS/jQuery, and PHP.'
+        ]
+      },
+      tracker: {
+        title: '2. Study Hours & Marks Tracker',
+        desc: 'A simple console tool in Python and C++ to log study hours and calculate subject averages.',
+        bullets: [
+          'Uses Python dictionaries and file handling to save records.',
+          'Includes a C++ class-based version for OOP practice.',
+          'Helps track which subjects need more revision before exams.'
+        ]
+      },
+      crud: {
+        title: '3. Event Registration Form',
+        desc: 'A practice form connecting jQuery client-side checks with PHP and MySQL (phpMyAdmin).',
+        bullets: [
+          'Validates required fields in jQuery before form submission.',
+          'Uses a normalized MySQL table in phpMyAdmin.',
+          'Uses PHP MySQLi prepared statements for safe inserts.'
+        ]
+      }
+    };
+
+    // Render Skills
+    const skillsGridEl = document.getElementById('skillsGrid');
+    function renderSkills(filterCategory) {
+      skillsGridEl.innerHTML = '';
+      const filtered = filterCategory === 'all'
+        ? skillsData
+        : skillsData.filter(item => item.category === filterCategory);
+
+      filtered.forEach(skill => {
+        const card = document.createElement('div');
+        card.className = 'theme-card rounded-lg border border-stone-200 bg-white p-4 space-y-2.5 shadow-sm';
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="mono text-[11px] font-semibold text-teal-800 uppercase">${skill.tag}</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-stone-100 text-stone-600 font-medium">${skill.status}</span>
+          </div>
+          <h3 class="text-base font-bold">${skill.title}</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${skill.desc}</p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            ${skill.items.map(t => `<span class="mono text-[11px] px-2 py-0.5 rounded border border-stone-200 text-stone-600">${t}</span>`).join('')}
+          </div>
+        `;
+        skillsGridEl.appendChild(card);
+      });
+    }
+
+    document.querySelectorAll('.skill-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.skill-filter-btn').forEach(b => {
+          b.className = 'skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-white border border-stone-300 text-stone-700 hover:bg-stone-100 transition-colors';
+        });
+        btn.className = 'skill-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-teal-800 text-white transition-colors';
+        renderSkills(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Code Switcher
+    let activeLang = 'python';
+    const codeDisplayArea = document.getElementById('codeDisplayArea');
+    const langExplanationBanner = document.getElementById('langExplanationBanner');
+
+    function setLanguageTab(langKey) {
+      activeLang = langKey;
+      const item = codeSnippets[langKey];
+      codeDisplayArea.textContent = item.code;
+      langExplanationBanner.textContent = item.banner;
+    }
+
+    document.querySelectorAll('.lang-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-tab-btn').forEach(b => {
+          b.className = 'lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-stone-900 text-stone-300 hover:bg-stone-700 transition-colors';
+        });
+        btn.className = 'lang-tab-btn px-3 py-1 rounded text-xs font-medium bg-teal-700 text-white transition-colors';
+        setLanguageTab(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // SGPA Calculator
+    const cppInput = document.getElementById('cppMarks');
+    const pyInput = document.getElementById('pythonMarks');
+    const webInput = document.getElementById('webMarks');
+    const attInput = document.getElementById('attendancePct');
+    const attDisplay = document.getElementById('attendanceValueDisplay');
+
+    function clampScore(val) {
+      const n = parseFloat(val);
+      if (isNaN(n)) return 0;
+      return Math.max(0, Math.min(100, n));
+    }
+
+    function runSgpaCalculation() {
+      const c = clampScore(cppInput.value);
+      const p = clampScore(pyInput.value);
+      const w = clampScore(webInput.value);
+      const att = parseInt(attInput.value, 10) || 75;
+
+      attDisplay.textContent = att + '%';
+      const avg = (c + p + w) / 3.0;
+      const sgpa = Math.min(10.0, avg / 9.5);
+
+      let grade = 'O Grade';
+      if (avg < 80 && avg >= 70) grade = 'A+ Grade';
+      else if (avg < 70 && avg >= 60) grade = 'A Grade';
+      else if (avg < 60 && avg >= 50) grade = 'B Grade';
+      else if (avg < 50) grade = 'Needs Practice';
+
+      document.getElementById('sgpaScoreText').textContent = sgpa.toFixed(2) + ' / 10';
+      document.getElementById('avgPctText').textContent = avg.toFixed(1) + '% (' + grade + ')';
+
+      const badge = document.getElementById('attendanceBadgeText');
+      if (att >= 75) {
+        badge.className = 'text-xs text-teal-800 pt-1.5 border-t border-stone-200';
+        badge.textContent = `Attendance Status: Eligible (${att}% is above 75%)`;
+      } else {
+        badge.className = 'text-xs text-amber-700 font-medium pt-1.5 border-t border-stone-200';
+        badge.textContent = `Attendance Warning: ${att}% is below 75% required`;
+      }
+    }
+
+    attInput.addEventListener('input', runSgpaCalculation);
+    document.getElementById('calculateSgpaBtn').addEventListener('click', runSgpaCalculation);
+
+    // Toast & Copy
+    const toastBanner = document.getElementById('toastBanner');
+    function showToast(msg) {
+      toastBanner.textContent = msg;
+      toastBanner.classList.remove('hidden');
+      setTimeout(() => toastBanner.classList.add('hidden'), 2200);
+    }
+
+    function copyTextSafe(text, label) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(label)).catch(() => fallbackCopy(text, label));
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      showToast(label);
+    }
+
+    document.getElementById('copyGithubBtn').addEventListener('click', () => {
+      copyTextSafe('https://github.com/tanaymewada', 'Copied github.com/tanaymewada');
+    });
+
+    document.getElementById('copyCodeSnippetBtn').addEventListener('click', () => {
+      copyTextSafe(codeSnippets[activeLang].code, 'Copied ' + activeLang.toUpperCase() + ' code');
+    });
+
+    // Modal
+    const projectModal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalBullets = document.getElementById('modalBullets');
+
+    document.querySelectorAll('.project-modal-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const info = projectDetails[btn.getAttribute('data-project')];
+        if (!info) return;
+        modalTitle.textContent = info.title;
+        modalDesc.textContent = info.desc;
+        modalBullets.innerHTML = info.bullets.map(b => `<li>${b}</li>`).join('');
+        projectModal.classList.remove('hidden');
+      });
+    });
+
+    function closeProjectModal() {
+      projectModal.classList.add('hidden');
+    }
+    document.getElementById('closeModalBtn').addEventListener('click', closeProjectModal);
+    document.getElementById('closeModalFooterBtn').addEventListener('click', closeProjectModal);
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Dark / Light Theme Toggle
+    let isDark = false;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const siteHeader = document.getElementById('siteHeader');
+    themeToggleBtn.addEventListener('click', () => {
+      isDark = !isDark;
+      document.body.classList.toggle('dark-mode', isDark);
+      themeToggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+      if (isDark) {
+        siteHeader.classList.remove('bg-[#f8f7f4]/95', 'border-stone-200');
+        siteHeader.classList.add('bg-zinc-900/95', 'border-zinc-800');
+        document.querySelectorAll('.theme-card').forEach(el => {
+          el.classList.remove('bg-white', 'border-stone-200');
+          el.classList.add('bg-zinc-900', 'border-zinc-800', 'text-zinc-100');
+        });
+        document.querySelectorAll('.theme-subcard').forEach(el => {
+          el.classList.remove('bg-stone-50', 'border-stone-200');
+          el.classList.add('bg-zinc-950', 'border-zinc-800');
+        });
+        document.querySelectorAll('.theme-input').forEach(el => {
+          el.classList.remove('bg-white', 'border-stone-300');
+          el.classList.add('bg-zinc-950', 'border-zinc-700', 'text-zinc-100');
+        });
+      } else {
+        siteHeader.classList.add('bg-[#f8f7f4]/95', 'border-stone-200');
+        siteHeader.classList.remove('bg-zinc-900/95', 'border-zinc-800');
+        document.querySelectorAll('.theme-card').forEach(el => {
+          el.classList.add('bg-white', 'border-stone-200');
+          el.classList.remove('bg-zinc-900', 'border-zinc-800', 'text-zinc-100');
+        });
+        document.querySelectorAll('.theme-subcard').forEach(el => {
+          el.classList.add('bg-stone-50', 'border-stone-200');
+          el.classList.remove('bg-zinc-950', 'border-zinc-800');
+        });
+        document.querySelectorAll('.theme-input').forEach(el => {
+          el.classList.add('bg-white', 'border-stone-300');
+          el.classList.remove('bg-zinc-950', 'border-zinc-700', 'text-zinc-100');
+        });
+      }
+    });
+
+    // Contact Form
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameVal = document.getElementById('senderName').value.trim();
+      const msgVal = document.getElementById('senderMessage').value.trim();
+      if (!nameVal || !msgVal) {
+        showToast('Please enter your name and message.');
+        return;
+      }
+      document.getElementById('formFeedbackMsg').classList.remove('hidden');
+      showToast('Message saved! Thanks, ' + nameVal + '.');
+      e.target.reset();
+    });
+
+    renderSkills('all');
+    setLanguageTab('python');
+    runSgpaCalculation();
+  </script>
+</body>
+</html>
